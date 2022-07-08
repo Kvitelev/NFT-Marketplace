@@ -1,0 +1,84 @@
+.road {
+  margin-bottom: 60px;
+}
+
+.title__road {
+  margin-bottom: 40px;
+}
+
+.item-box {
+  max-width: 286px;
+  min-height: 214px;
+  font-size: 16px;
+  line-height: 24px;
+  background: linear-gradient(127.41deg, rgba(#da25e233, 0.2) 14.83%, rgba(#5718f333, 0.2) 110.24%, rgba(#fff5ee33, 0.2) 110.24%);
+  margin-bottom: 25px;
+  border-radius: 8px;
+}
+
+.road__list {
+  @include flex-all-center;
+  flex-direction: column;
+  &-secondery {
+    padding: 45px 10px 10px 20px;
+  }
+}
+
+.road__item {
+  padding-top: 0;
+  padding-left: 60px;
+  &::before {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
+}
+
+@include desktop {
+  .road {
+    margin-bottom: 160px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background-image: url(../img/pictures/Mask.png);
+      background-repeat: no-repeat;
+      background-size: 500px 700px;
+      width: 500px;
+      height: 700px;
+      z-index: -1;
+    }
+  }
+
+  .item-box {
+    max-width: 750px;
+    min-height: 254px;
+    font-size: 24px;
+    line-height: 36px;
+    border-radius: 14px;
+    margin-bottom: 0;
+    &:nth-child(even) {
+      margin-top: 130px;
+    }
+  }
+
+  .road__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 80px;
+    &-secondery {
+      padding: 34px 80px;
+    }
+  }
+
+  .road__item {
+    max-width: 360px;
+    &::before {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}

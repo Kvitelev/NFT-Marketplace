@@ -1,0 +1,154 @@
+html {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "DMSans";
+  font-size: 12px;
+  line-height: 18px;
+  background-color: $black-fone;
+  color: $white;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 375px;
+  margin: auto;
+  padding: 0 50px;
+  @include desktop {
+    max-width: 1440px;
+    padding: 0 120px;
+  }
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.centered {
+  width: 100%;
+  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.title {
+  font-family: "Exo";
+  font-size: 24px;
+  line-height: 26px;
+  text-align: center;
+  font-weight: 700;
+  @include desktop {
+    font-size: 46px;
+    line-height: 56px;
+  }
+}
+
+.btn {
+  font-family: "Exo";
+  font-size: 14px;
+  color: $white;
+  border-radius: 8px;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #D123E3, #5C19F3 60%);
+
+  &--create {
+    background-color: transparent;
+    border: 2px solid #D123E3;
+  }
+  &--content {
+    background-color: transparent;
+    border: 2px solid $white;
+    margin-left: auto;
+    @include mobile {
+      display: none;
+    }
+  }
+  @include desktop {
+    padding: 21px 57px;
+  }
+}
+
+.img {
+  width: 273px;
+  height: 361px;
+  border-radius: 15px;
+  @include desktop {
+    width: 368px;
+    height: 488px;
+    border-radius: 30px;
+  }
+}
+
+.list {
+  counter-reset: section;
+  margin-bottom: 40px;
+}
+
+.item {
+  position: relative;
+  padding-top: 5px;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  &::before {
+    @include flex-all-center;
+    content: "" counter(section);
+    counter-increment: section;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Exo";
+    font-weight: 700;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(127.41deg, rgba(#da25e2,0.2) 14.83%, rgba(#5718f3,0.2) 110.24%, rgba(#fff5ee,0.2) 110.24%);
+    border-radius: 4px;
+  }
+  @include desktop {
+    font-size: 26px;
+    line-height: 39px;
+    padding-left: 70px;
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    &::before {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}

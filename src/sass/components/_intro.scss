@@ -1,0 +1,96 @@
+.intro {
+  margin-bottom: 40px;
+}
+
+.intro__title {
+  max-width: 285px;
+  margin: 15px auto;
+  position: relative;
+  font-size: 36px;
+  line-height: 42px;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 40px;
+    bottom: 16px;
+    width: 106px;
+    height: 13px;
+    background: linear-gradient(90deg, #5C19F3, #D123E3 50%);
+    z-index: -1;
+  }
+}
+
+.intro__description {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+  line-height: 16px;
+}
+
+.intro__flex-btn {
+  @include flex-all-center;
+  column-gap: 20px;
+}
+
+.intro__bg {
+  background-image: url(../../img/pictures/intro-bg.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: auto;
+  height: 361px;
+}
+
+@include desktop {
+  .intro__title {
+    position: relative;
+    font-size: 84px;
+    line-height: 98px;
+    text-align: start;
+    max-width: 588px;
+    margin: 0;
+    margin-bottom: 55px;
+    &::after {
+      right: 75px;
+      bottom: 30px;
+      width: 300px;
+      height: 50px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -470px;
+      left: -200px;
+      background-image: url(../img/pictures/Mask-2.png);
+      background-repeat: no-repeat;
+      background-size: 1200px 1200px;
+      width: 1200px;
+      height: 1200px;
+      z-index: -1;
+    }
+  }
+
+  .intro__description {
+    font-size: 24px;
+    line-height: 31px;
+    text-align: start;
+    max-width: 588px;
+    margin-bottom: 55px;
+  }
+
+  .intro__flex-btn {
+    justify-content: flex-start;
+    column-gap: 30px;
+  }
+
+  .intro__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(../img/pictures/intro-bg-desktop.jpg);
+    width: 672px;
+    height: 960px;
+    z-index: -1;
+    background-size: 672px 960px;
+  }
+}

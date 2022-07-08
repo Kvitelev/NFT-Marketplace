@@ -1,0 +1,14 @@
+.nft {
+  margin-bottom: 50px;
+}
+
+.nft__flex {
+  @include flex-all-center;
+  flex-direction: column;
+}
+
+@include desktop {
+  .nft {
+    margin-bottom: 150px;
+  }
+}

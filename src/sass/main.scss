@@ -1,0 +1,19 @@
+// Базовые компоненты
+@import "colors";
+@import "mixins";
+@import "fonts";
+@import "setings";
+
+// Крупные блоки
+@import "./components/header";
+@import "./components/price-block-1";
+@import "./components/block-img";
+@import "./components/400-nft";
+@import "./components/square";
+@import "./components/road";
+@import "./components/game";
+@import "./components/footer";
+
+// Мелкие блоки
+@import "./components/menu";
+@import "./components/intro";

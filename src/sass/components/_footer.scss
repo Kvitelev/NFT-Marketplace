@@ -1,0 +1,101 @@
+.footer {
+  background-image: url(../img/pictures/footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 46px;
+  padding-bottom: 60px
+}
+
+.footer__flex {
+  @include flex-all-center;
+  flex-direction: column;
+}
+
+.footer__link-logo {
+  margin-bottom: 30px;
+}
+
+.footer__link {
+  font-family: "Exo";
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $white;
+}
+
+.footer__list,
+.footer__list-social {
+  @include flex;
+  flex-wrap: wrap;
+}
+
+.footer__list {
+  gap: 48px;
+  margin-bottom: 51px;
+}
+
+.footer__list-social {
+  gap: 20px;
+}
+
+.footer__item__social {
+  @include flex-all-center;
+  width: 37px;
+  height: 37px;
+  background: linear-gradient(135.83deg, rgba(#d8e3ff33, 0.2) 11.5%, rgba(#fff5ee1a, 0.102) 83.39%, #dde7ff00);
+  border-radius: 8px;
+}
+
+@include desktop {
+  .footer {
+    background-image: url(../img/pictures/footer-bg-desctop.jpg);
+    padding-top: 61px;
+    padding-bottom: 44px
+  }
+
+  .footer__flex {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer__link-logo {
+    margin-bottom: 0;
+  }
+
+  .footer__logo {
+    width: 83px;
+    height: 87px;
+  }
+
+  .footer__list {
+    margin-bottom: 0;
+  }
+
+  .footer__link {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 5px;
+    &--active {
+      color: #db24e2;
+      border-bottom: 2px solid #db24e2;
+    }
+  }
+
+  .footer__item__social {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+  }
+
+  .footer__icon-discord {
+    width: 30px;
+    height: 22px;
+  }
+
+  .footer__icon-twitter {
+    width: 36px;
+    height: 30px;
+  }
+}

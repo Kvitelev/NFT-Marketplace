@@ -1,0 +1,37 @@
+.header {
+  position: relative;
+  padding-top: 20px;
+  margin-bottom: 64px;
+}
+
+.header__flex {
+  @include flex-all-sb;
+  flex-wrap: wrap;
+}
+
+.btn-menu__img {
+  &:hover {
+    fill: $purple-pink;
+  }
+  &:active {
+    fill: $rebeccapurple;
+  }
+}
+
+@include desktop {
+  .header {
+    min-height: 940px;
+    margin-bottom: 145px;
+  }
+  .header__logo {
+    width: 53px;
+    height: 56px;
+  }
+
+  .header__flex {
+    column-gap: 98px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 150px;
+  }
+}

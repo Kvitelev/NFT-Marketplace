@@ -1,0 +1,60 @@
+.block-img__title {
+  margin-bottom: 42px
+}
+
+.block-img__flex {
+  @include flex-all-center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@include desktop {
+  .block-img {
+    background-image: url(../img/pictures/Mask-3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 800px 800px;
+    position: relative;
+    margin-bottom: 100px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 300px;
+      right: 0;
+      background-image: url(../img/pictures/Mask.png);
+      background-repeat: no-repeat;
+      background-size: 500px 700px;
+      width: 500px;
+      height: 700px;
+      z-index: -1;
+      transform: rotate(180deg);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0;
+      background-image: url(../img/pictures/Mask-2.png);
+      background-repeat: no-repeat;
+      background-size: 800px 800px;
+      width: 800px;
+      height: 800px;
+      z-index: -1;
+      transform: rotate(180deg);
+    }
+  }
+
+  .block-img__title {
+    margin-bottom: 75px
+  }
+
+  .block-img__flex {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .img-bottom {
+    margin-top: 250px;
+  }
+}

@@ -1,0 +1,113 @@
+.price {
+  position: relative;
+  margin-bottom: 56px;
+  &__flex {
+    @include flex-all-center;
+    flex-direction: column;
+  }
+}
+
+.price__img {
+  margin-bottom: 32px;
+}
+
+@include desktop {
+  .price {
+    position: relative;
+    margin-bottom: 153px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -120px;
+      left: 0;
+      background-image: url(../img/pictures/Mask.png);
+      background-repeat: no-repeat;
+      background-size: 500px 700px;
+      width: 500px;
+      height: 700px;
+      z-index: -1;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -100px;
+      left: 0;
+      background-image: url(../img/pictures/Mask-2.png);
+      background-repeat: no-repeat;
+      background-size: 800px 800px;
+      width: 800px;
+      height: 800px;
+      z-index: -1;
+    }
+    &--reverse {
+      &::after {
+        top: -120px;
+        left: 1100px;
+        transform: rotate(180deg);
+      }
+      &::before {
+        top: 100px;
+        left: 800px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .price__flex {
+    display: grid;
+    grid-template-columns: 432px 600px;
+    grid-template-rows: 200px 300px 100px;
+    column-gap: 160px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    &--reverse {
+      grid-template-columns: 600px 432px;
+      column-gap: 180px;
+    }
+  }
+
+  .price__title {
+    max-width: 500px;
+    text-align: start;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    &--reverse {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+  }
+
+  .price__list {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-bottom: 37px;
+    &--reverse {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+  }
+
+  .price__img {
+    width: 432px;
+    height: 574px;
+    border-radius: 40px;
+    margin-bottom: 0;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    &--reverse {
+      border-radius: 25px;
+      grid-column: 2/3;
+      grid-row: 1/3;
+    }
+  }
+
+  .price__btn {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    justify-self: start;
+    &--reverse {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+  }
+}

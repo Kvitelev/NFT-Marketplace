@@ -1,0 +1,37 @@
+.menu {
+  text-align: center;
+  width: 100%;
+  &-close {
+    display: none;
+  }
+  &__item {
+    padding-top: 10px;
+  }
+}
+
+.menu__link {
+  font-size: 18px;
+  font-weight: 500;
+  display: inline-block;
+  color: white;
+  padding-bottom: 2px;
+  &--active {
+    color: $purple-pink;
+    border-bottom: 2px solid $purple-pink;
+  }
+}
+
+@include desktop {
+  .menu {
+    width: auto;
+  }
+
+  .btn-menu {
+    display: none;
+  }
+
+  .menu__list {
+    @include flex;
+    gap: 50px;
+  }
+}

@@ -1,0 +1,75 @@
+.square {
+  margin-bottom: 55px;
+}
+
+.square__flex {
+  @include flex-all-center;
+  flex-direction: column;
+}
+
+.square__title {
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.square__img {
+  margin-bottom: 32px;
+}
+
+@include desktop {
+  .square {
+    position: relative;
+    background-image: url(../img/pictures/Mask-2.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 800px 800px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -150px;
+      right: 0;
+      background-image: url(../img/pictures/Mask.png);
+      background-repeat: no-repeat;
+      background-size: 500px 700px;
+      width: 500px;
+      height: 700px;
+      z-index: -1;
+      transform: rotate(180deg);
+    }
+  }
+
+  .square__flex {
+    display: grid;
+    justify-content: space-between;
+    align-items: flex-start;
+    grid-template-columns: 600px 433px;
+    grid-template-rows: 200px 200px 100px;
+    row-gap: 50px;
+  }
+
+  .square__title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-bottom: 66px;
+    text-align: start;
+  }
+
+  .square__list {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .square__img {
+    width: 433px;
+    height:574px;
+    margin-bottom: 0;
+    grid-column: 2/3;
+    grid-row: 1/4;
+  }
+
+  .square__btn {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    justify-self: start;
+  }
+}
